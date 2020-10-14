@@ -1,3 +1,13 @@
+.square {
+    position: absolute;
+    top: 50px;
+    left: 750px;
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+  }
 body {
-    background-color: blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(Images/RepeatingImg.png)
+    
 }
