@@ -15,13 +15,20 @@ div.style.left = Math.floor(Math.random() * 400 + 1) + 550 + "px"
 div.style.backgroundColor = "#" + randomColor
 document.body.appendChild(div)
 }
+let MouseClicked = false
 for(let i = 0; i < 5; i++) {
     let v = i
-document.querySelector(".square" + v).addEventListener("mousedown", function xxx (e) {
-    addEventListener("mousemove", function yyy (e) {
+document.querySelector(".square" + v).addEventListener("mousedown", function (e) {
+    addEventListener("mousemove", dupa = function (e) {
     let div1 = document.querySelector(".square" + v)
     div1.style.top = e.clientY - 15 + "px"
-    div1.style.left = e.clientX- 15 + "px"
+    div1.style.left = e.clientX - 15 + "px"
     })
-})
 }
+)
+document.querySelector(".square" + v).addEventListener("mouseup", function (e) {
+    removeEventListener("mousemove", dupa)
+}
+)
+}
+console.log(MouseClicked)
