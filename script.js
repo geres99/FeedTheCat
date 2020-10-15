@@ -26,9 +26,12 @@ document.querySelector(".square" + v).addEventListener("mousedown", function (e)
     })
 }
 )
-document.querySelector(".square" + v).addEventListener("mouseup", function (e) {
+    let o = i
+document.querySelector(".square" + o).addEventListener("mouseup", function (e) {
+    let div2 = document.querySelector(".square" + o)
+    div2.style.top = 10000 + "px"
     removeEventListener("mousemove", dupa)
+    console.log(o, div2)
 }
 )
 }
-console.log(MouseClicked)
