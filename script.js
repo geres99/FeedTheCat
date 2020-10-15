@@ -1,11 +1,4 @@
-var initialX
-var initialY
-function showCoords(event) {
-    var x = event.clientX;
-    var y = event.clientY;
-    var coords = "X coords: " + x + ", Y coords: " + y;
-    document.getElementById("dupa12").innerHTML = coords;
-  }
+let ZjedzonePrzysmaki = 0
 for(var i = 0; i < 5; i++) {
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
 var div = document.createElement("div")
@@ -15,7 +8,6 @@ div.style.left = Math.floor(Math.random() * 400 + 1) + 550 + "px"
 div.style.backgroundColor = "#" + randomColor
 document.body.appendChild(div)
 }
-let MouseClicked = false
 for(let i = 0; i < 5; i++) {
     let v = i
 document.querySelector(".square" + v).addEventListener("mousedown", function (e) {
@@ -29,9 +21,23 @@ document.querySelector(".square" + v).addEventListener("mousedown", function (e)
     let o = i
 document.querySelector(".square" + o).addEventListener("mouseup", function (e) {
     let div2 = document.querySelector(".square" + o)
-    div2.style.top = 10000 + "px"
     removeEventListener("mousemove", dupa)
-    console.log(o, div2)
+    if(e.clientX > 150 && e.clientX < 300 && e.clientY > 50 && e.clientY < 200) {
+    div2.style.top = 10000 + "px"
+    ZjedzonePrzysmaki ++
+    document.getElementById("dupa13").innerHTML = "Zjedzone Chrupki:" + ZjedzonePrzysmaki
+    }
+
 }
 )
+
+    ZrobDostawe = function() {
+        for(let p = 0; p < 5; p++) {
+        var randomColor = Math.floor(Math.random()*16777215).toString(16);
+        let div3 = document.querySelector(".square" + p)
+        div3.style.top = Math.floor(Math.random() * 250 + 1) + 10 + "px"
+        div3.style.left = Math.floor(Math.random() * 400 + 1) + 550 + "px"
+        div3.style.backgroundColor = "#" + randomColor
+        }
+    }
 }
