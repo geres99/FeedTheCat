@@ -15,12 +15,13 @@ div.style.left = Math.floor(Math.random() * 400 + 1) + 550 + "px"
 div.style.backgroundColor = "#" + randomColor
 document.body.appendChild(div)
 }
-for(var i = 0; i < 5; i++) {
-var dragStart = function(e) {
-    dupa12.innerHTML = "Meow"
-    div.style.top = e.clientY + "px"
-    div.style.left = e.clientX + "px"
-    }
-document.querySelector(".square" + i).addEventListener("mousedown",dragStart)
+for(let i = 0; i < 5; i++) {
+    let v = i
+document.querySelector(".square" + v).addEventListener("mousedown", function xxx (e) {
+    addEventListener("mousemove", function yyy (e) {
+    let div1 = document.querySelector(".square" + v)
+    div1.style.top = e.clientY - 15 + "px"
+    div1.style.left = e.clientX- 15 + "px"
+    })
+})
 }
-  
