@@ -1,4 +1,4 @@
-let ZjedzonePrzysmaki = 0
+let EatenChips = 0
 for(var i = 0; i < 5; i++) {
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
 var div = document.createElement("div")
@@ -24,14 +24,14 @@ document.querySelector(".square" + o).addEventListener("mouseup", function (e) {
     removeEventListener("mousemove", dupa)
     if(e.clientX > 150 && e.clientX < 300 && e.clientY > 50 && e.clientY < 200) {
     div2.style.top = 10000 + "px"
-    ZjedzonePrzysmaki ++
-    document.getElementById("dupa13").innerHTML = "Zjedzone Chrupki:" + ZjedzonePrzysmaki
+    EatenChips ++
+    document.getElementById("Blank1").innerHTML = "EatenChips:" + EatenChips
     }
 
 }
 )
 
-    ZrobDostawe = function() {
+    MakeDelivery = function() {
         for(let p = 0; p < 5; p++) {
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
         let div3 = document.querySelector(".square" + p)
